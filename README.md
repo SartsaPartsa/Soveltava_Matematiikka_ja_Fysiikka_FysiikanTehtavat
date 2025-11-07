@@ -44,7 +44,6 @@ Tehtävä on osa Soveltava matematiikka ja fysiikka -kurssia.
 
 ## 📁 Projektikansio
 ```plaintext
-
 Fysiikka1/
 ├── README.md                           # Projektin dokumentaatio
 ├── datan_kuvajaa.ipynb                # Python-analyysi (Jupyter Notebook)
