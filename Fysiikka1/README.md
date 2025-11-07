@@ -1,4 +1,4 @@
-# 📱 PhyPhox Kiihtyvyysmittaus - Fysiikan Tehtävä 1
+ 📱 PhyPhox Kiihtyvyysmittaus - Fysiikan Tehtävä 1
 
 ## 👤 Tekijä
 
