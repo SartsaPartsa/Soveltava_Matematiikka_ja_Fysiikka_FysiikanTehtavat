@@ -4,7 +4,7 @@
 
 **Tekijä:** Sara Vehviläinen  
 **Oppilaitos:** Oulun ammattikorkeakoulu  
-**Kurssi:** Soveltava matematiikka ja fysiikka  
+**Kurssi:** Soveltava matematiikka ja fysiikka ohjlmoinnissa
 **Lukukausi:** Syksy 2025
 
 ### 🧩 Tehtävän kuvaus
