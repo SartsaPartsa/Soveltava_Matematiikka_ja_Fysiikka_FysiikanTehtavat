@@ -1,15 +1,18 @@
-📊 Python — PhyPhox Kiihtyvyysanalyysi
+# Soveltava Matematiikka ja fysiikka ohjelmoinnissa
+
+## 📊 Python — PhyPhox Kiihtyvyysanalyysi
+
 **Tekijä:** Sara Vehviläinen  
 **Oppilaitos:** Oulun ammattikorkeakoulu  
 **Kurssi:** Soveltava matematiikka ja fysiikka  
 **Lukukausi:** Syksy 2025
 
-## 🧩 Tehtävän kuvaus
+### 🧩 Tehtävän kuvaus
 Tämä projekti analysoi PhyPhox-sovelluksella kerättyä kiihtyvyysdataa Python-ohjelmalla. Mittauksessa liikutettiin puhelinta eri suuntiin ~20 sekunnin ajan ja analysoitiin tulokset kolmessa koordinaattisuunnassa (x, y, z).
 
 Tehtävä on osa Soveltava matematiikka ja fysiikka -kurssia.
 
-## 📐 Analyysiperusteet
+### 📐 Analyysiperusteet
 - **Mittausaika:** 19.7 sekuntia
 - **Datapisteitä:** 1975 kpl (~100 Hz näytteenottotaajuus)
 - **Komponentit:** 
@@ -32,7 +35,7 @@ Tehtävä on osa Soveltava matematiikka ja fysiikka -kurssia.
 - **NumPy** - Numeerinen laskenta
 - **python-docx** - Word-dokumenttien automaattinen luonti
 - **PhyPhox** - Mittausdatan keräys älypuhelimella
-```
+
 
 ## 📊 Analyysin suorittaminen
 1. **Solu 1:** Lataa PhyPhox CSV-data ja näytä ensimmäiset rivit
@@ -41,6 +44,7 @@ Tehtävä on osa Soveltava matematiikka ja fysiikka -kurssia.
 
 ## 📁 Projektikansio
 ```plaintext
+
 Fysiikka1/
 ├── README.md                           # Projektin dokumentaatio
 ├── datan_kuvajaa.ipynb                # Python-analyysi (Jupyter Notebook)
@@ -58,7 +62,7 @@ Fysiikka1/
     └── time.csv                       # Aikaleimoja ja synkronointitiedot
 ```
 
-## 🎯 Oppimistavoitteet
+### 🎯 Oppimistavoitteet
 - PhyPhox-mittausdatan keräys ja käsittely
 - Python-datan-analyysi pandas-kirjastolla
 - Tieteellisten kuvaajien luominen matplotlib-kirjastolla
@@ -66,7 +70,7 @@ Fysiikka1/
 - Kiihtyvyyskomponenttien ymmärtäminen fysikaalisesti
 - CSV-datan lukeminen ja käsittely Pythonilla
 
-## 📝 Huomioita
+### 📝 Huomioita
 - PhyPhox tallentaa datan tieteellisessä notaatiossa (E-notaatio)
 - Aika mitataan sekunteina mittauksen alusta
 - Kiihtyvyys mitataan m/s² -yksikössä
