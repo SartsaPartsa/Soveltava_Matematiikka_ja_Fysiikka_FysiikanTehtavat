@@ -72,7 +72,6 @@ Fysiikka1/
     ├── device.csv                     # Laitetiedot ja anturitiedot
     └── time.csv                       # Aikaleimoja ja synkronointitiedot
 ```
----
 
 ### 🎯 Oppimistavoitteet
 - PhyPhox-mittausdatan keräys ja käsittely
