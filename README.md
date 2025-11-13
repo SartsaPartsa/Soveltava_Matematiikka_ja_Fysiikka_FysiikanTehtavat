@@ -4,13 +4,17 @@
 
 **Tekijä:** Sara Vehviläinen  
 **Oppilaitos:** Oulun ammattikorkeakoulu  
-**Kurssi:** Soveltava matematiikka ja fysiikka ohjelmoinnissa
+**Kurssi:** Soveltava matematiikka ja fysiikka ohjelmoinnissa  
 **Lukukausi:** Syksy 2025
+
+---
 
 ### 🧩 Tehtävän kuvaus
 Tämä projekti analysoi PhyPhox-sovelluksella kerättyä kiihtyvyysdataa Python-ohjelmalla. Mittauksessa liikutettiin puhelinta eri suuntiin ~20 sekunnin ajan ja analysoitiin tulokset kolmessa koordinaattisuunnassa (x, y, z).
 
 Tehtävä on osa Soveltava matematiikka ja fysiikka -kurssia.
+
+---
 
 ### 📐 Analyysiperusteet
 - **Mittausaika:** 19.7 sekuntia
@@ -21,12 +25,16 @@ Tehtävä on osa Soveltava matematiikka ja fysiikka -kurssia.
   - Z-komponentti (syvyyssuunta)
 - **Absoluuttinen kiihtyvyys:** √(x² + y² + z²)
 
+---
+
 ## ✨ Toiminnallisuus
 - PhyPhox-datan lukeminen CSV-muodosta
 - Kiihtyvyyskomponenttien visualisointi matplotlib-kirjastolla
 - Automaattinen Word-dokumentin luonti kaikilla kuvaajilla
 - Erillisten PNG-kuvaajien tallennus jokaiselle komponentille
 - Puhelimen ruutukaapauden yhdistäminen analyysiin
+
+---
 
 ## 🛠️ Käytetyt teknologiat ja kirjastot
 - **Python 3**
@@ -36,11 +44,15 @@ Tehtävä on osa Soveltava matematiikka ja fysiikka -kurssia.
 - **python-docx** - Word-dokumenttien automaattinen luonti
 - **PhyPhox** - Mittausdatan keräys älypuhelimella
 
+---
+
 
 ## 📊 Analyysin suorittaminen
 1. **Solu 1:** Lataa PhyPhox CSV-data ja näytä ensimmäiset rivit
 2. **Solu 2:** Piirrä peruskuvaaja kaikille komponenteille
 3. **Solu 3:** Luo automaattisesti Word-dokumentti kaikilla kuvaajilla
+
+---
 
 ## 📁 Projektikansio
 ```plaintext
@@ -69,12 +81,16 @@ Fysiikka1/
 - Kiihtyvyyskomponenttien ymmärtäminen fysikaalisesti
 - CSV-datan lukeminen ja käsittely Pythonilla
 
+---
+
 ### 📝 Huomioita
 - PhyPhox tallentaa datan tieteellisessä notaatiossa (E-notaatio)
 - Aika mitataan sekunteina mittauksen alusta
 - Kiihtyvyys mitataan m/s² -yksikössä
 - Absoluuttinen kiihtyvyys lasketaan automaattisesti PhyPhoxissa
 - Word-dokumentti luodaan automaattisesti väliaikaisten PNG-tiedostojen kautta
+
+---
 
 ## 📚 Oppimisresurssit
 
