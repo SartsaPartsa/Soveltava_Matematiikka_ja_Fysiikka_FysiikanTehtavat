@@ -10,12 +10,13 @@
 ---
 
 ### 🧩 Projektien kuvaus
-Tämä repositorio sisältää kaksi PhyPhox-sovelluksella kerätyn datan analyysiprojektia:
+Tämä repositorio sisältää kolme PhyPhox-sovelluksella kerätyn datan analyysiprojektia:
 
 1. **Fysiikka1:** Kiihtyvyysanalyysi (liikuttelu)
 2. **Fysiikka2:** Askelmittari (kävelyanalyysi)
+3. **Fysiikka3:** GPS-reitin analyysi (paikannus ja matkan laskenta)
 
-Molemmat tehtävät analysoidaan Python-ohjelmilla ja ovat osa Soveltava matematiikka ja fysiikka -kurssia.
+Kaikki tehtävät analysoidaan Python-ohjelmilla ja ovat osa Soveltava matematiikka ja fysiikka -kurssia.
 
 ---
 
@@ -61,12 +62,37 @@ Molemmat tehtävät analysoidaan Python-ohjelmilla ja ovat osa Soveltava matemat
 
 ---
 
+## 🗺️ FYSIIKKA3: GPS-reitin analyysi
+
+### 📐 Analyysiperusteet
+- **Mittaustyyppi:** GPS-paikannus PhyPhox-sovelluksella
+- **Kuljettu matka:** ~0.632 km (Haversinen kaava)
+- **Menetelmät:**
+  - Interaktiivinen karttavisualisointi (Folium)
+  - Haversinen kaava matkan laskentaan
+  - GPS-tarkkuuden ja satelliittien analyysi
+- **Tehtävän osat:**
+  - a) Reitin piirtäminen kartalle
+  - b) Mittauksen luotettavuuden arviointi
+  - c) Satelliittien ja tarkkuuden visualisointi
+  - d) Matkan laskenta Haversinen kaavalla
+
+### ✨ Toiminnallisuus
+- Interaktiivinen HTML-kartta Folium-kirjastolla
+- GPS-tarkkuuden värikoodaus kartalla (vihreä/oranssi/punainen)
+- Satelliittien määrän ja tarkkuuden kuvaajat
+- Matkan laskenta maapallon kaarevuus huomioiden
+- Automaattinen kuvaajien tallennus PNG-muotoon
+
+---
+
 ## 🛠️ Käytetyt teknologiat ja kirjastot
 - **Python 3**
 - **Pandas** - Datan käsittely ja analyysi
 - **Matplotlib** - Kuvaajien piirtäminen ja visualisointi
 - **NumPy** - Numeerinen laskenta
 - **SciPy** - Signaalien käsittely (askelmittari)
+- **Folium** - Interaktiiviset kartat (GPS-analyysi)
 - **python-docx** - Word-dokumenttien automaattinen luonti
 - **PhyPhox** - Mittausdatan keräys älypuhelimella
 
@@ -104,6 +130,18 @@ Soveltava_fysiikka/
     └── meta/                         # PhyPhox metadata
         ├── device.csv               
         └── time.csv                 
+└── Fysiikka3/                         # GPS-reitin analyysi
+    ├── kartta.ipynb                  # Python GPS-analyysi
+    ├── GPS.csv                       # PhyPhox GPS-mittausdata
+    ├── reitti_phyphox.html          # Interaktiivinen kartta
+    ├── satelliitit_aika.png         # Satelliittien määrä ajassa
+    ├── tarkkuus_aika.png            # GPS-tarkkuus ajassa
+    ├── satelliitit_jakauma.png      # Satelliittien jakauma
+    ├── tarkkuus_jakauma.png         # Tarkkuuden jakauma
+    ├── tarkkuus_kuvaaja.png         # Tarkkuuden yksityiskohtainen kuvaaja
+    └── meta/                         # PhyPhox metadata
+        ├── device.csv               
+        └── time.csv                 
 ```
 
 ### 🎯 Oppimistavoitteet
@@ -121,6 +159,13 @@ Soveltava_fysiikka/
 - Fysikaaliset mittausmenetelmät (askelmittari)
 - Kahden menetelmän vertailu ja validointi
 
+#### Fysiikka3:
+- GPS-paikannuksen perusteet ja tarkkuus
+- Haversinen kaavan soveltaminen matkan laskentaan
+- Interaktiivisten karttojen luonti (Folium)
+- Satelliittien vaikutus GPS-tarkkuuteen
+- Mittausdatan luotettavuuden arviointi
+
 ---
 
 ### 📝 Huomioita
@@ -135,6 +180,13 @@ Soveltava_fysiikka/
 - Kaksi laskumenetelmää antaa vertailukelpoisia tuloksia
 - Automaattinen sarakkeiden tunnistus toimii eri PhyPhox-versioilla
 - Kuvaajat tallennetaan automaattisesti PNG-muotoon
+
+#### Fysiikka3:
+- GPS-tarkkuus vaihtelee satelliittien määrän mukaan
+- Haversinen kaava ottaa huomioon maapallon kaarevuuden
+- Interaktiivinen kartta voidaan avata selaimessa (HTML)
+- Värikoodaus helpottaa tarkkuuden arviointia
+- Kuljettu matka: noin 0.632 km, keskinopeus: 5.69 km/h (kävelynopeus)
 
 ---
 
