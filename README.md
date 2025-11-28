@@ -10,11 +10,12 @@
 ---
 
 ### 🧩 Projektien kuvaus
-Tämä repositorio sisältää kolme PhyPhox-sovelluksella kerätyn datan analyysiprojektia:
+Tämä repositorio sisältää neljä fysiikan mittausdatan analyysiprojektia:
 
 1. **Fysiikka1:** Kiihtyvyysanalyysi (liikuttelu)
 2. **Fysiikka2:** Askelmittari (kävelyanalyysi)
 3. **Fysiikka3:** GPS-reitin analyysi (paikannus ja matkan laskenta)
+4. **Fysiikka4:** Signaalinanalyysi (FFT ja tehospektri)
 
 Kaikki tehtävät analysoidaan Python-ohjelmilla ja ovat osa Soveltava matematiikka ja fysiikka -kurssia.
 
@@ -86,20 +87,44 @@ Kaikki tehtävät analysoidaan Python-ohjelmilla ja ovat osa Soveltava matematii
 
 ---
 
+## 🔊 FYSIIKKA4: Signaalinanalyysi
+
+### 📐 Analyysiperusteet
+- **Mittaustyyppi:** Digitaalisen signaalin taajuusanalyysi
+- **Menetelmät:**
+  - FFT (Fast Fourier Transform) - Nopea Fourier-muunnos
+  - Tehospektrianalyysi (Power Spectral Density)
+  - Taajuuskomponenttien tunnistus
+- **Parametrit:**
+  - Näytteenottotaajuus: 1000 Hz
+  - Teho desibeleinä (dB-asteikko)
+  - Taajuusalue: 0 - 500 Hz (Nyquistin taajuus)
+
+### ✨ Toiminnallisuus
+- Excel-datan lukeminen ja esikäsittely
+- FFT-muunnos aikatasosta taajuustasoon
+- Tehospektrin laskenta ja visualisointi
+- Dominoivan taajuuden automaattinen tunnistus
+- Kuvaajien tallennus PNG-muotoon (300 dpi)
+- Selkeä konsolituloste analyysin tuloksista
+
+---
+
 ## 🛠️ Käytetyt teknologiat ja kirjastot
 - **Python 3**
 - **Pandas** - Datan käsittely ja analyysi
 - **Matplotlib** - Kuvaajien piirtäminen ja visualisointi
-- **NumPy** - Numeerinen laskenta
+- **NumPy** - Numeerinen laskenta ja FFT-muunnokset
 - **SciPy** - Signaalien käsittely (askelmittari)
 - **Folium** - Interaktiiviset kartat (GPS-analyysi)
 - **python-docx** - Word-dokumenttien automaattinen luonti
+- **OpenPyXL** - Excel-tiedostojen lukeminen
 - **PhyPhox** - Mittausdatan keräys älypuhelimella
 
 ---
 
+## 📁 Projektirakenne
 
-## � Projektirakenne
 ```plaintext
 Soveltava_fysiikka/
 ├── README.md                          # Projektien dokumentaatio
@@ -116,32 +141,51 @@ Soveltava_fysiikka/
 │   │   └── 04_z_komponentti.png     
 │   └── meta/                         # PhyPhox metadata
 │       ├── device.csv               
+│       └── time.csv                
+├── Fysiikka2/                         # Askelmittari
+│   ├── askelmittari.ipynb            # Python askelmittari-analyysi (ensimmäinen versio)
+│   ├── Tehtava2_askelmittari.ipynb   # Päivitetty versio
+│   ├── walk.csv                      # PhyPhox kävelymittausdata
+│   ├── Askelmittari_kuva.png         # Puhelimen ruutukaappaus
+│   ├── Tehtava2eka_Askelmittari_Palautus_Sara_Vehvilainen.docx  # Ensimmäinen palautus
+│   ├── Tehtava2eka_Askelmittari_Palautus_Sara_Vehvilainen.pdf   # PDF-versio
+│   ├── Tehtava2_Askelmittari_Palautus_Sara_Vehvilainen.docx     # Lopullinen palautus
+│   ├── Tehtava2_Askelmittari_Palautus_Sara_Vehvilainen.pdf      # PDF-versio
+│   ├── 01_alkuperaiset_mittaukset.png # Automaattisesti luodut kuvaajat
+│   ├── 01_raakadata.png              
+│   ├── 02_tehospektrit.png           
+│   ├── 03_suodatus.png               
+│   ├── 04_askeleiden_tunnistus.png   
+│   ├── Tehtava2/                     # Tyhjä kansio
+│   └── meta/                         # PhyPhox metadata
+│       ├── device.csv               
+│       └── time.csv 
+├── Fysiikka3/                         # GPS-reitin analyysi
+│   ├── kartta.ipynb                  # Python GPS-analyysi
+│   ├── GPS.csv                       # PhyPhox GPS-mittausdata
+│   ├── reitti_phyphox.html          # Interaktiivinen kartta
+│   ├── Kavelyreitti.jpg             # Reitin valokuva
+│   ├── phyphox-kartta.png           # PhyPhox-sovelluksen karttanäkymä
+│   ├── gps_kuvaajat.png             # Yhdistetty kuvaaja
+│   ├── satelliitit_aika.png         # Satelliittien määrä ajassa
+│   ├── tarkkuus_aika.png            # GPS-tarkkuus ajassa
+│   ├── satelliitit_jakauma.png      # Satelliittien jakauma
+│   ├── tarkkuus_jakauma.png         # Tarkkuuden jakauma
+│   ├── tarkkuus_kuvaaja.png         # Tarkkuuden yksityiskohtainen kuvaaja
+│   ├── Tehtava3_Palautus_ Sara_Vehvilainen.docx  # Palautus (huom. välilyönti)
+│   ├── Tehtava3_Palautus_ Sara_Vehvilainen.pdf   # PDF-versio
+│   └── meta/                         # PhyPhox metadata
+│       ├── device.csv               
 │       └── time.csv                 
-└── Fysiikka2/                         # Askelmittari
-    ├── askelmittari.ipynb            # Python askelmittari-analyysi
-    ├── walk.csv                      # PhyPhox kävelymittausdata
-    ├── Askelmittari_kuva.png         # Puhelimen ruutukaappaus
-    ├── Tehtava2_Askelmittari_Palautus_Sara_Vehvilainen.docx  # Palautus
-    ├── Tehtava2_Askelmittari_Palautus_Sara_Vehvilainen.pdf   # PDF-versio
-    ├── 01_alkuperaiset_mittaukset.png # Automaattisesti luodut kuvaajat
-    ├── 02_tehospektrit.png           
-    ├── 03_suodatus.png               
-    ├── 04_askeleiden_tunnistus.png   
-    └── meta/                         # PhyPhox metadata
-        ├── device.csv               
-        └── time.csv                 
-└── Fysiikka3/                         # GPS-reitin analyysi
-    ├── kartta.ipynb                  # Python GPS-analyysi
-    ├── GPS.csv                       # PhyPhox GPS-mittausdata
-    ├── reitti_phyphox.html          # Interaktiivinen kartta
-    ├── satelliitit_aika.png         # Satelliittien määrä ajassa
-    ├── tarkkuus_aika.png            # GPS-tarkkuus ajassa
-    ├── satelliitit_jakauma.png      # Satelliittien jakauma
-    ├── tarkkuus_jakauma.png         # Tarkkuuden jakauma
-    ├── tarkkuus_kuvaaja.png         # Tarkkuuden yksityiskohtainen kuvaaja
-    └── meta/                         # PhyPhox metadata
-        ├── device.csv               
-        └── time.csv                 
+└── Fysiikka4/                         # Signaalinanalyysi
+    ├── Signaali.ipynb                # Python FFT-analyysi
+    ├── Signaali.xlsx                 # Mittausdata (Excel)
+    ├── aikasignaali.png              # Aikatasokuvaaja
+    ├── tehospektri.png               # Taajuustasokuvaaja
+    ├── Python_koodi1.png             # Koodikuvat dokumentaatioon
+    ├── Python_koodi2.png             
+    ├── Python_koodi3.png             
+    └── Tehtava3_Palautus_Sara_Vehvilainen.docx  # Palautus
 ```
 
 ### 🎯 Oppimistavoitteet
@@ -166,6 +210,14 @@ Soveltava_fysiikka/
 - Satelliittien vaikutus GPS-tarkkuuteen
 - Mittausdatan luotettavuuden arviointi
 
+#### Fysiikka4:
+- Fourier-muunnoksen teoria ja sovellukset
+- FFT-algoritmin käyttö taajuusanalyysissä
+- Tehospektrin tulkinta ja dominoivien taajuuksien tunnistus
+- Nyquistin teoreema ja näytteenottotaajuus
+- Aikatasosta taajuustasoon siirtyminen
+- Logaritminen dB-asteikko signaalitehon esittämisessä
+
 ---
 
 ### 📝 Huomioita
@@ -188,6 +240,13 @@ Soveltava_fysiikka/
 - Värikoodaus helpottaa tarkkuuden arviointia
 - Kuljettu matka: noin 0.632 km, keskinopeus: 5.69 km/h (kävelynopeus)
 
+#### Fysiikka4:
+- FFT on tehokas algoritmi Fourier-muunnoksen laskemiseen
+- Näytteenottotaajuuden on oltava vähintään 2× signaalin maksimitaajuus (Nyquist)
+- Tehospektri paljastaa signaalin taajuuskomponentit
+- dB-asteikko (10·log₁₀(P)) sopii laajan dynamiikan esittämiseen
+- Excel-data voidaan lukea suoraan pandas-kirjastolla
+
 ---
 
 ## 📚 Oppimisresurssit
@@ -197,12 +256,15 @@ Soveltava_fysiikka/
 - [Matplotlib Documentation](https://matplotlib.org/stable/contents.html) - Kuvaajien piirtäminen
 - [NumPy Documentation](https://numpy.org/doc/) - Numeerinen laskenta
 - [SciPy Documentation](https://scipy.org/doc/) - Signaalien käsittely ja tieteellinen laskenta
+- [Folium Documentation](https://python-visualization.github.io/folium/) - Interaktiiviset kartat
 - [Python-docx Documentation](https://python-docx.readthedocs.io/) - Word-dokumenttien luonti
 
 ### PhyPhox ja fysiikka:
 - [PhyPhox Website](https://phyphox.org/) - Virallinen PhyPhox-sivusto
 - [PhyPhox Documentation](https://phyphox.org/wiki/) - PhyPhox-dokumentaatio
 - [Accelerometer Physics](https://en.wikipedia.org/wiki/Accelerometer) - Kiihtyvyysantureiden fysiikka
+- [Haversine Formula](https://en.wikipedia.org/wiki/Haversine_formula) - Matkan laskenta pallon pinnalla
+- [GPS Accuracy Factors](https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System) - GPS-tarkkuuteen vaikuttavat tekijät
 
 ### Jupyter Notebook:
 - [Jupyter Documentation](https://jupyter.org/documentation) - Jupyter Notebook -dokumentaatio
