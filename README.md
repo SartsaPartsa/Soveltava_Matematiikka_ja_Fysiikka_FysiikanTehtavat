@@ -264,6 +264,14 @@ Soveltava_fysiikka/
 - [Haversine Formula](https://en.wikipedia.org/wiki/Haversine_formula) - Matkan laskenta pallon pinnalla
 - [GPS Accuracy Factors](https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System) - GPS-tarkkuuteen vaikuttavat tekijät
 
+### Signaalinkäsittely ja FFT:
+- [Fourier Transform](https://en.wikipedia.org/wiki/Fourier_transform) - Fourier-muunnoksen teoria
+- [Fast Fourier Transform (FFT)](https://en.wikipedia.org/wiki/Fast_Fourier_transform) - FFT-algoritmi
+- [NumPy FFT Documentation](https://numpy.org/doc/stable/reference/routines.fft.html) - NumPy FFT-funktiot
+- [Understanding FFT](https://www.dspguide.com/) - Digital Signal Processing Guide
+- [Nyquist-Shannon Sampling Theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem) - Näytteenottoteoreema
+- [Power Spectral Density](https://en.wikipedia.org/wiki/Spectral_density) - Tehospektritiheys
+
 ### Jupyter Notebook:
 - [Jupyter Documentation](https://jupyter.org/documentation) - Jupyter Notebook -dokumentaatio
 - [JupyterLab Documentation](https://jupyterlab.readthedocs.io/) - JupyterLab-käyttöliittymä
