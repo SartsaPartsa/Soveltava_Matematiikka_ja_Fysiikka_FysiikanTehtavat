@@ -1,7 +1,5 @@
 # Soveltava Matematiikka ja fysiikka ohjelmoinnissa
 
-## 📊 Python — PhyPhox Data-analyysi
-
 **Tekijä:** Sara Vehviläinen  
 **Oppilaitos:** Oulun ammattikorkeakoulu  
 **Kurssi:** Soveltava matematiikka ja fysiikka ohjelmoinnissa  
